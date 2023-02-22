@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import homepageRouter from "./homepageRouter.js";
+import assetsRouter from "./assetsRouter.js";
 
 const port = process.env.PORT || 3000;
 const publicPath = path.join(path.resolve(), "public");
@@ -12,6 +13,7 @@ app.get("/api/v1/hello", (_req, res) => {
 });
 
 app.use("/", express.static(publicPath));
+app.use("/src", assetsRouter);
 app.use(homepageRouter);
 
 app.listen(port, () => {
