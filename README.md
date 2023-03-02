@@ -2,7 +2,7 @@
 
 This project showcases how to make a full-stack app using Vue, Vite and Express.
 
-It was part of my blogpost at the Codeminer42 Blog: [Making a Full-Stack App with Vue, Vite and Express that supports Hot Reload](https://blog.codeminer42.com/making-a-full-stack-app-with-vue-vite-and-express-that-supports-hot-reload/)
+It is part of my blogpost at the Codeminer42 Blog: [Making a Full-Stack App with Vue, Vite and Express that supports Hot Reload](https://blog.codeminer42.com/making-a-full-stack-app-with-vue-vite-and-express-that-supports-hot-reload/)
 
 ## Installation
 
