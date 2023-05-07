@@ -3,7 +3,16 @@ import http from "http";
 
 const router = express.Router();
 
-const supportedAssets = ["svg", "png", "jpg", "png", "jpeg", "mp4", "ogv"];
+const supportedAssets = [
+  "svg",
+  "png",
+  "jpg",
+  "png",
+  "jpeg",
+  "mp4",
+  "ogv",
+  "js",
+];
 
 const assetExtensionRegex = () => {
   const formattedExtensionList = supportedAssets.join("|");
