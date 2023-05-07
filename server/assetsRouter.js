@@ -1,4 +1,5 @@
 import express from "express";
+import http from "http";
 
 const router = express.Router();
 
@@ -11,7 +12,16 @@ const assetExtensionRegex = () => {
 };
 
 router.get(assetExtensionRegex(), (req, res) => {
-  res.redirect(303, `http://localhost:5173/src${req.path}`);
+  proxyRequest(req, res, `http://localhost:5173/src${req.path}`);
 });
+
+const proxyRequest = (clientReq, clientRes, url) => {
+  const proxy = http.request(url, function (proxyRes) {
+    clientRes.writeHead(proxyRes.statusCode, proxyRes.headers);
+    proxyRes.pipe(clientRes, { end: true });
+  });
+
+  clientReq.pipe(proxy, { end: true });
+};
 
 export default router;
