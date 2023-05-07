@@ -1,5 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+
+import MyWorker from "./workers/myWorker?worker";
+
+const worker = new MyWorker();
 </script>
 
 <template>
