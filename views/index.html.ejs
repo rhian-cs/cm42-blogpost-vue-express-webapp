@@ -14,7 +14,7 @@
     <% if (environment === 'production') { %>
     <script type="module" src="<%= manifest['src/main.js'].file %>"></script>
     <% } else { %>
-    <script type="module" src="http://localhost:5173/@vite"></script>
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
     <script type="module" src="http://localhost:5173/src/main.js"></script>
     <% } %>
   </body>
